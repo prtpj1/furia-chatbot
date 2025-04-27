@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  /* System Colors */
+  --alert: oklch(0.63 0.2571 29.21);
+  --info: oklch(0.56 0.2407 260.89);
+  --success: oklch(0.59 0.1994 142.61);
+  --warning: oklch(0.79 0.1698 71.36);
+
+  /* Neutral Palette */
+  --neutral-white: oklch(1 0 none);
+  --neutral-50: oklch(0.98 0 none);
+  --neutral-100: oklch(0.95 0 none);
+  --neutral-200: oklch(0.85 0 none);
+  --neutral-300: oklch(0.79 0 none);
+  --neutral-400: oklch(0.72 0 none);
+  --neutral-500: oklch(0.66 0 none);
+  --neutral-600: oklch(0.56 0 none);
+  --neutral-700: oklch(0.46 0 none);
+  --neutral-800: oklch(0.36 0 none);
+  --neutral-900: oklch(0.25 0 none);
+  --neutral-950: oklch(0.19 0 none);
+  --neutral-black: oklch(0 0 none);
+
+  /* Colors Palettes */
+  --yellow-50: oklch(98.87% 0.0126 86.828);
+  --yellow-100: oklch(97.12% 0.03564 89.44);
+  --yellow-200: oklch(93.779% 0.08002 90.268);
+  --yellow-300: oklch(90.675% 0.11963 90.051);
+  --yellow-400: oklch(87.633% 0.14988 88.25);
+  --yellow-500: oklch(85.051% 0.16753 85.511);
+  --yellow-600: oklch(79.281% 0.16335 82.034);
+  --yellow-700: oklch(66.435% 0.13667 82.776);
+  --yellow-800: oklch(52.719% 0.10838 83.116);
+  --yellow-900: oklch(38.262% 0.0784 85.142);
+  --yellow-950: oklch(30.326% 0.06203 86.968);
+
+  /* Main Colors */
+  --primary: var(--neutral-950);
+  --highlight: var(--yellow-500);
+
+  /* Background Colors */
+  --bg-surface: var();
+  --bg-header: var();
+  --bg-page: var(--primary);
+  --bg-card: var();
+
+  --bg-btn: var();
+  --bg-btn-hover: var();
+  --bg-btn-disable: var();
+
+  --bg-icon-hover: var();
+  --bg-tooltip: var();
+
+  --bg-text-selection: var();
+  --bg-input-autofill: var();
+
+  /* Text Colors */
+  --text-default: var(--neutral-50);
+  --text-disable: var();
+  --text-primary-light: var();
+  --text-primary: var();
+  --text-primary-dark: var();
+  --text-highlight: var(--highlight);
+  --text-caret: var();
+
+  --text-btn-default: var();
+  --text-btn-primary: var();
+
+  --text-menu: var();
+
+  --text-link: var();
+  --text-link-hover: var();
+
+  --text-tooltip: var();
+
+  /* Icons Colors */
+  --icon: var();
+  --icon-hover: var();
+
+  /* Border Colors */
+  --border-default: var();
+  --border-primary: var();
+  --border-secondary: var();
+
+  --border-highlight: var();
+
+  --border-neutral-50: var(--neutral-50);
+  --border-neutral-100: var(--neutral-100);
+  --border-neutral-200: var(--neutral-200);
+  --border-neutral-300: var(--neutral-300);
+  --border-neutral-400: var(--neutral-400);
+  --border-neutral-500: var(--neutral-500);
+  --border-neutral-600: var(--neutral-600);
+  --border-neutral-700: var(--neutral-700);
+  --border-neutral-800: var(--neutral-800);
+  --border-neutral-900: var(--neutral-900);
+  --border-neutral-950: var(--neutral-950);
+
+  --border-success: var(--success);
+  --border-warning: var(--warnning);
+  --border-error: var(--alert);
+
+  /* Shadow Colors/Opacity */
+  --shadow-black_a100: oklch(0 0 none);
+  --shadow-black_a90: oklch(0 0 none / 0.9);
+  --shadow-black_a70: oklch(0 0 none / 0.7);
+  --shadow-black_a50: oklch(0 0 none / 0.5);
+  --shadow-black_a30: oklch(0 0 none / 0.3);
+  --shadow-black_a10: oklch(0 0 none / 0.1);
+  --shadow-black_a0: oklch(0 0 none / 0);
+
+  /* SPACING */
+  --sp-3xs: 0.2rem;
+  --sp-2xs: 0.4rem;
+  --sp-xs: 0.8rem;
+  --sp-sm: 1.2rem;
+  --sp-md: 1.6rem;
+  --sp-lg: 2.4rem;
+  --sp-xl: 3.2rem;
+  --sp-2xl: 4rem;
+  --sp-3xl: 4.8rem;
+  --sp-4xl: 6.4rem;
+
+  /* BORDERS */
+  --radius-xxs: 0.2rem;
+  --radius-xs: 0.4rem;
+  --radius-sm: 0.8rem;
+  --radius-md: 1.6rem;
+  --radius-lg: 2.4rem;
+  --radius-xl: 3.2rem;
+  --radius-circle: 50%;
+
+  /* Font Family */
+  --ff-primary: 'Lato', sans-serif;
+  --ff-secondary: 'Bebas Neue', sans-serif;
+
+  /* Font Sizes */
+  --fs-2xs: 1rem;
+  --fs-xs: 1.2rem;
+  --fs-sm: 1.3rem;
+  --fs-md: 1.6rem;
+  --fs-lg: 2rem;
+  --fs-xl: 2.4rem;
+  --fs-2xl: 2.8rem;
+  --fs-3xl: 3.2rem;
+  --fs-4xl: 4rem;
+  --fs-5xl: 4.8rem;
+  --fs-6xl: 5.6rem;
+  --fs-7xl: 6.4rem;
+  --fs-8xl: 7.2rem;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --fw-black: 900;
+
+  /* Z-INDEX */
+  --z-index-modal: 1000;
+  --z-index-tooltip: 1100;
+}
