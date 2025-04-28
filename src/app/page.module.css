@@ -1,0 +1,32 @@
+.page {
+  position: relative;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.main h1 {
+  font-size: var(--fs-8xl);
+  letter-spacing: var(--sp-2xs);
+}
+
+.chatContainer {
+  position: fixed;
+  bottom: 0;
+  right: 4rem;
+  z-index: var(--z-index-modal);
+
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  height: 60vh;
+
+  transform: translate(-50% 50%);
+}

@@ -41,15 +41,19 @@
   --highlight: var(--yellow-500);
 
   /* Background Colors */
-  --bg-surface: var();
+  --bg-surface: var(--neutral-400);
   --bg-header: var();
+  --bg-header-chat: var(--yellow-500);
   --bg-page: var(--primary);
   --bg-card: var();
+  --bg-modal: var(--neutral-900);
 
-  --bg-btn: var();
+  --bg-btn-default: var();
   --bg-btn-hover: var();
   --bg-btn-disable: var();
+  --bg-btn-cta: var(--yellow-500);
 
+  --bg-icon-default: var();
   --bg-icon-hover: var();
   --bg-tooltip: var();
 
@@ -58,6 +62,7 @@
 
   /* Text Colors */
   --text-default: var(--neutral-50);
+  --text-alt: var(--neutral-950);
   --text-disable: var();
   --text-primary-light: var();
   --text-primary: var();
@@ -78,6 +83,7 @@
   /* Icons Colors */
   --icon: var();
   --icon-hover: var();
+  --icon-cta: var(--yellow-950);
 
   /* Border Colors */
   --border-default: var();
