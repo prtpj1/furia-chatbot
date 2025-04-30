@@ -1,0 +1,52 @@
+.header {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+
+  width: 100%;
+  padding: 2rem 7.2rem;
+
+  background: linear-gradient(
+    0deg,
+    rgba(20, 20, 20, 0) 0%,
+    var(--neutral-950) 70%
+  );
+}
+
+.navMenu ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.iconYoutube:hover {
+  color: red;
+}
+
+.iconTwitch:hover {
+  color: rgb(119, 0, 255);
+}
+
+.iconInstagram:hover {
+  color: rgb(255, 0, 242);
+}
+
+.iconTikTok:hover {
+  background: linear-gradient(
+    45deg,
+    rgb(255, 0, 242) 50%,
+    rgb(0, 179, 255) 50%
+  );
+  border-radius: 50%;
+}
+
+.iconTwitter:hover {
+  color: rgb(0, 174, 255);
+}
+
+.icon:active {
+  transform: scale(0.95);
+}
