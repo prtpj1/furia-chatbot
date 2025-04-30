@@ -24,42 +24,47 @@
   --neutral-black: oklch(0 0 none);
 
   /* Colors Palettes */
-  --yellow-50: oklch(98.87% 0.0126 86.828);
-  --yellow-100: oklch(97.12% 0.03564 89.44);
-  --yellow-200: oklch(93.779% 0.08002 90.268);
-  --yellow-300: oklch(90.675% 0.11963 90.051);
-  --yellow-400: oklch(87.633% 0.14988 88.25);
-  --yellow-500: oklch(85.051% 0.16753 85.511);
-  --yellow-600: oklch(79.281% 0.16335 82.034);
-  --yellow-700: oklch(66.435% 0.13667 82.776);
-  --yellow-800: oklch(52.719% 0.10838 83.116);
-  --yellow-900: oklch(38.262% 0.0784 85.142);
-  --yellow-950: oklch(30.326% 0.06203 86.968);
+  --primary-50: oklch(98.87% 0.0126 86.828);
+  --primary-100: oklch(97.12% 0.03564 89.44);
+  --primary-200: oklch(93.779% 0.08002 90.268);
+  --primary-300: oklch(90.675% 0.11963 90.051);
+  --primary-400: oklch(87.633% 0.14988 88.25);
+  --primary-500: oklch(85.051% 0.16753 85.511);
+  --primary-600: oklch(79.281% 0.16335 82.034);
+  --primary-700: oklch(66.435% 0.13667 82.776);
+  --primary-800: oklch(52.719% 0.10838 83.116);
+  --primary-900: oklch(38.262% 0.0784 85.142);
+  --primary-950: oklch(30.326% 0.06203 86.968);
 
   /* Main Colors */
-  --primary: var(--neutral-950);
-  --highlight: var(--yellow-500);
+  --primary: var(--primary-500);
+  --highlight: var(--primary-300);
 
   /* Background Colors */
   --bg-surface: var(--neutral-400);
   --bg-header: var();
-  --bg-header-chat: var(--yellow-500);
-  --bg-page: var(--primary);
+  --bg-header-chat: var(--primary);
+  --bg-page: var(--neutral-950);
   --bg-card: var();
   --bg-modal: var(--neutral-900);
 
   --bg-btn-default: var();
-  --bg-btn-hover: var(--yellow-300);
+  --bg-btn-hover: var(--primary-400);
   --bg-btn-hover-alt: var(--neutral-900);
   --bg-btn-disable: var();
-  --bg-btn-cta: var(--yellow-500);
+  --bg-btn-cta: var(--primary);
+  --bg-btn-gradient_135deg: linear-gradient(
+    135deg,
+    var(--primary-500) 9.32%,
+    var(--primary-700) 91.75%
+  );
 
   --bg-icon-default: var();
   --bg-icon-hover: var();
   --bg-tooltip: var();
 
-  --bg-text-selection: var(--yellow-700);
-  --bg-input-autofill: var(--yellow-600);
+  --bg-text-selection: var(--primary-700);
+  --bg-input-autofill: var(--primary-600);
 
   /* Text Colors */
   --text-default: var(--neutral-50);
@@ -68,8 +73,8 @@
   --text-primary-light: var();
   --text-primary: var();
   --text-primary-dark: var();
-  --text-highlight: var(--highlight);
-  --text-caret: var(--yellow-700);
+  --text-highlight: var();
+  --text-caret: var(--primary-700);
 
   --text-btn-default: var(--neutral-950);
   --text-btn-alt: var(--neutral-50);
@@ -85,15 +90,15 @@
   /* Icons Colors */
   --icon: var();
   --icon-hover: var();
-  --icon-cta: var(--yellow-950);
+  --icon-cta: var(--primary-950);
 
   /* Border Colors */
   --border-default: var(--neutral-500);
   --border-primary: var();
   --border-secondary: var();
 
-  --border-highlight: var(--yellow-600);
-  --border-cta: var(--yellow-500);
+  --border-highlight: var(--primary-600);
+  --border-cta: var(--primary);
 
   --border-neutral-50: var(--neutral-50);
   --border-neutral-100: var(--neutral-100);
