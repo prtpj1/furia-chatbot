@@ -39,11 +39,13 @@
   /* Main Colors */
   --primary: var(--primary-500);
   --highlight: var(--primary-300);
+  --accent: var(--primary-700);
 
   /* Background Colors */
   --bg-surface: var(--neutral-400);
   --bg-header: var();
   --bg-header-chat: var(--primary);
+  --bg-chat: var(--primary);
   --bg-page: var(--neutral-950);
   --bg-card: var();
   --bg-modal: var(--neutral-900);
@@ -65,6 +67,25 @@
 
   --bg-text-selection: var(--primary-700);
   --bg-input-autofill: var(--primary-600);
+  --bg-input: var(--neutral-50);
+
+  --bg-neutraldark-gradient: linear-gradient(
+    180deg,
+    var(--neutral-800) 0%,
+    var(--neutral-950) 100%
+  );
+
+  --bg-black-gradient: linear-gradient(
+    180deg,
+    var(--neutral-black) 0%,
+    var(--neutral-900) 100%
+  );
+
+  --bg-primary-gradient: linear-gradient(
+    180deg,
+    var(--yellow-700, #bc8a00) 0%,
+    var(--yellow-400, #ffd051) 100%
+  );
 
   /* Text Colors */
   --text-default: var(--neutral-50);
@@ -90,7 +111,7 @@
   /* Icons Colors */
   --icon: var();
   --icon-hover: var();
-  --icon-cta: var(--primary-950);
+  --icon-cta: var(--primary);
 
   /* Border Colors */
   --border-default: var(--neutral-500);
@@ -99,6 +120,7 @@
 
   --border-highlight: var(--primary-600);
   --border-cta: var(--primary);
+  --border-input-focus: var(--primary-800);
 
   --border-neutral-50: var(--neutral-50);
   --border-neutral-100: var(--neutral-100);
@@ -138,6 +160,8 @@
   --sp-4xl: 6.4rem;
 
   /* BORDERS */
+  --radius-none: 0rem;
+  --radius-xs: 0.2rem;
   --radius-xxs: 0.2rem;
   --radius-xs: 0.4rem;
   --radius-sm: 0.8rem;
@@ -167,12 +191,20 @@
 
   /* Font Weights */
   --fw-light: 300;
-  --fw-normal: 400;
+  --fw-regular: 400;
   --fw-medium: 500;
   --fw-semi-bold: 600;
   --fw-bold: 700;
   --fw-extra-bold: 800;
   --fw-black: 900;
+
+  /* Line Height */
+  --leading-none: 1.6rem;
+  --leading-tight: 2rem;
+  --leading-snug: 2.2rem;
+  --leading-normal: 2.4rem;
+  --leading-relaxed: 2.6rem;
+  --leading-loose: 3.2rem;
 
   /* Z-INDEX */
   --z-index-modal: 1000;

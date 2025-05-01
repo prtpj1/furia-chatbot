@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "./chat.module.css";
-import { IoSend } from "react-icons/io5";
+import { FaTelegramPlane } from "react-icons/fa";
 import { useChat } from "@ai-sdk/react";
 import { useEffect, useRef } from "react";
 export default function Chat() {
@@ -28,8 +28,19 @@ export default function Chat() {
 	return (
 		<>
 			<div className={styles.Chat}>
+				<div className={styles.ChatAvatar}>
+					<Image
+						src="/avatar_bust.png"
+						width={112}
+						height={112}
+						alt="Avatar da Furiosinha"
+					/>
+				</div>
 				<div className={styles.ChatHeader}>
-					<h1 className={styles.ChatTitle}>Furia Chatbot</h1>
+					<h1 className={styles.ChatTitle}>
+						<p>Chat com a</p>
+						<p>Furiosinha</p>
+					</h1>
 				</div>
 				<div className={styles.ChatContent}>
 					{messages.map((message) => (
@@ -42,7 +53,7 @@ export default function Chat() {
 							{message.role === "assistant" && (
 								<div className={`${styles.Avatar} ${styles.AvatarAI}`}>
 									<Image
-										src="/furia_logo.png"
+										src="/chat-avatar-ai.png"
 										width={50}
 										height={50}
 										alt="Avatar"
@@ -52,20 +63,14 @@ export default function Chat() {
 							{message.role === "user" && (
 								<div className={`${styles.Avatar} ${styles.AvatarUser}`}>
 									<Image
-										src="/user_avatar.svg"
+										src="/chat-avatar-user.png"
 										width={50}
 										height={50}
 										alt="Avatar"
 									/>
 								</div>
 							)}
-							<p>
-								<span>
-									{message.role === "user" ? "Usuário: " : "Furiosinha: "}
-								</span>
-								<br />
-								{message.content}
-							</p>
+							<p>{message.content}</p>
 						</div>
 					))}
 					<div ref={bottomRef} />
@@ -80,7 +85,7 @@ export default function Chat() {
 							onChange={handleInputChange}
 						/>
 						<button className={styles.ChatBtnSubmit} type="submit">
-							<IoSend className={styles.ChatBtnIcon} size={28} />
+							<FaTelegramPlane className={styles.ChatBtnIcon} size={28} />
 						</button>
 					</form>
 				</div>

@@ -136,12 +136,13 @@
   position: fixed;
   bottom: 0;
   right: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
   z-index: var(--z-index-modal);
 
-  width: 100%;
-  max-width: 40rem;
-  margin: 0 auto;
-  height: 60vh;
-
-  transform: translate(-50% 50%);
+  width: 34rem;
+  height: 56rem;
+  padding-top: var(--sp-sm);
 }

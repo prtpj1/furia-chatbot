@@ -54,3 +54,28 @@ select:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px var(--bg-input-autofill) inset !important;
   -webkit-text-fill-color: var(--text-alt) !important;
 }
+
+::-webkit-scrollbar {
+  direction: rtl;
+  width: 1rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  box-shadow: 0rem -0.1rem 0.17rem 0rem rgba(0, 0, 0, 0.25) inset,
+    -0.1rem 0.1rem 0.17rem 0rem rgba(0, 0, 0, 0.25) inset;
+  border-top: 0.3rem solid transparent;
+  border-right: 0.3rem solid transparent;
+  border-bottom: 0.3rem solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent);
+}
