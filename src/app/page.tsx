@@ -48,11 +48,14 @@ export default function Home() {
 						<legend className={styles.visuallyHidden}>
 							Ações do formulário
 						</legend>
-						<button className={styles.btnSubmit} type="submit">
+						<button
+							className={`${styles.btn} ${styles.btnSubmit}`}
+							type="submit"
+						>
 							INSCREVA-SE
 						</button>
 						<Link
-							className={styles.btnWebsite}
+							className={`${styles.btn} ${styles.btnWebsite}`}
 							href="https://www.furia.gg/"
 							target="_blank"
 							rel="noreferrer"

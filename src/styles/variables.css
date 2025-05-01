@@ -121,6 +121,7 @@
   --border-highlight: var(--primary-600);
   --border-cta: var(--primary);
   --border-input-focus: var(--primary-800);
+  --border-btn-focus: var(--primary-100);
 
   --border-neutral-50: var(--neutral-50);
   --border-neutral-100: var(--neutral-100);

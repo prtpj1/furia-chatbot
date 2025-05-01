@@ -131,6 +131,10 @@
   background: var(--bg-btn-hover-alt);
 }
 
+.btn:focus {
+  outline: var(--border-btn-focus) 0.4rem solid;
+}
+
 /* ///////////////////// CHAT ///////////////////////////////////// */
 .chatContainer {
   position: fixed;

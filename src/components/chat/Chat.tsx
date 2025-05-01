@@ -11,7 +11,7 @@ export default function Chat() {
 				id: "1",
 				role: "assistant",
 				content:
-					"Grrr! Cheguei! A maior fã do FURIA!\n Se tem alguma dúvida sobre o nosso time, manda que eu tô aqui pra responder com a garra da pantera!",
+					"RAAAAAAWWR!\nFuriosinha, a maior fã do FURIA, na área!!\n\nSe tem alguma dúvida sobre o nosso time, manda que eu tô aqui pra responder com a garra da pantera!",
 			},
 		],
 		api: "/api/chat",
@@ -27,22 +27,29 @@ export default function Chat() {
 
 	return (
 		<>
-			<div className={styles.Chat}>
-				<div className={styles.ChatAvatar}>
+			<section className={styles.Chat} aria-labelledby="chat-title">
+				<figure className={styles.ChatAvatar}>
 					<Image
 						src="/avatar_bust.png"
 						width={112}
 						height={112}
-						alt="Avatar da Furiosinha"
+						alt=""
+						role="presentation"
+						aria-hidden="true"
 					/>
-				</div>
-				<div className={styles.ChatHeader}>
-					<h1 className={styles.ChatTitle}>
-						<p>Chat com a</p>
-						<p>Furiosinha</p>
+				</figure>
+				<header className={styles.ChatHeader}>
+					<h1 className={styles.ChatTitle} id="chat-title">
+						<span>Chat com a</span>
+						<span>Furiosinha</span>
 					</h1>
-				</div>
-				<div className={styles.ChatContent}>
+				</header>
+				<main
+					className={styles.ChatContent}
+					role="log"
+					aria-live="polite"
+					aria-relevant="additions"
+				>
 					{messages.map((message) => (
 						<div
 							className={`${styles.ChatMsgContainer} ${
@@ -56,7 +63,7 @@ export default function Chat() {
 										src="/chat-avatar-ai.png"
 										width={50}
 										height={50}
-										alt="Avatar"
+										alt="Avatar da Furiosinha"
 									/>
 								</div>
 							)}
@@ -66,7 +73,7 @@ export default function Chat() {
 										src="/chat-avatar-user.png"
 										width={50}
 										height={50}
-										alt="Avatar"
+										alt="Avatar do usuário"
 									/>
 								</div>
 							)}
@@ -74,22 +81,34 @@ export default function Chat() {
 						</div>
 					))}
 					<div ref={bottomRef} />
-				</div>
-				<div className={styles.ChatFooter}>
+				</main>
+				<footer className={styles.ChatFooter}>
 					<form className={styles.ChatForm} onSubmit={handleSubmit}>
+						<label
+							htmlFor="chat-message-input"
+							className={styles.visuallyHidden}
+						>
+							Digite sua mensagem
+						</label>
 						<input
 							className={styles.ChatInputMsg}
+							id="chat-message-input"
 							type="text"
 							placeholder="Digite sua mensagem"
 							value={input}
 							onChange={handleInputChange}
+							autoComplete="off"
 						/>
-						<button className={styles.ChatBtnSubmit} type="submit">
+						<button
+							className={styles.ChatBtnSubmit}
+							type="submit"
+							aria-label="Enviar mensagem"
+						>
 							<FaTelegramPlane className={styles.ChatBtnIcon} size={28} />
 						</button>
 					</form>
-				</div>
-			</div>
+				</footer>
+			</section>
 		</>
 	);
 }
