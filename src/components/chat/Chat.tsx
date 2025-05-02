@@ -23,6 +23,7 @@ export default function Chat() {
 
 	const bottomRef = useRef<HTMLDivElement>(null);
 	const errorAppendedRef = useRef(false);
+	const chatInputRef = useRef<HTMLInputElement>(null);
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <Com o uso do if anteriormente colocado, o efeito de rolar o chat automaticamente para baixo conforme a IA ia escrevendo não estava funcionando corretamente. Até encontrar uma solução funcional, deixarei este warning desativado>
 	useEffect(() => {
@@ -47,6 +48,10 @@ export default function Chat() {
 		}
 		return () =>
 			document.removeEventListener("keydown", handleKeyDownCloseChat);
+	}, [isChatOpen]);
+
+	useEffect(() => {
+		if (isChatOpen) chatInputRef.current?.focus();
 	}, [isChatOpen]);
 
 	function handleChatToggle() {
@@ -147,6 +152,7 @@ export default function Chat() {
 							className={styles.ChatInputMsg}
 							id="chat-message-input"
 							type="text"
+							ref={chatInputRef}
 							placeholder="Digite sua mensagem"
 							value={input}
 							onChange={handleInputChange}
