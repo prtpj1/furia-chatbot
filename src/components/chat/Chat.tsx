@@ -4,26 +4,39 @@ import styles from "./chat.module.css";
 import { FaTelegramPlane } from "react-icons/fa";
 import { useChat } from "@ai-sdk/react";
 import { useEffect, useRef } from "react";
+
 export default function Chat() {
-	const { messages, input, handleInputChange, handleSubmit } = useChat({
-		initialMessages: [
-			{
-				id: "1",
-				role: "assistant",
-				content:
-					"RAAAAAAWWR!\nFuriosinha, a maior fã do FURIA, na área!!\n\nSe tem alguma dúvida sobre o nosso time, manda que eu tô aqui pra responder com a garra da pantera!",
-			},
-		],
-		api: "/api/chat",
-	});
+	const { messages, input, handleInputChange, handleSubmit, error, append } =
+		useChat({
+			initialMessages: [
+				{
+					id: "1",
+					role: "assistant",
+					content:
+						"RAAAAAAWWR!\nFuriosinha, a maior fã do FURIA, na área!!\n\nSe tem alguma dúvida sobre o nosso time, manda que eu tô aqui pra responder com a garra da pantera!",
+				},
+			],
+			api: "/api/chat",
+		});
 
 	const bottomRef = useRef<HTMLDivElement>(null);
+	const errorAppendedRef = useRef(false);
 
 	useEffect(() => {
-		if (messages.length > 0) {
-			bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+		// if (messages.length > 0) {
+		bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+		// }
+	}, [messages]);
+
+	useEffect(() => {
+		if (error && !errorAppendedRef.current) {
+			const errorMsg = error.message.includes("429")
+				? "Seus créditos diários acabaram. Tente novamente amanhã."
+				: "Algo deu errado. Por favor, tente mais tarde.";
+			append({ role: "assistant", content: errorMsg });
+			errorAppendedRef.current = true;
 		}
-	}, [messages.length]);
+	}, [error, append]);
 
 	return (
 		<>
