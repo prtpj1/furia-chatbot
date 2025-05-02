@@ -1,14 +1,17 @@
 .Chat {
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 0.9rem;
 
-  width: 100%;
-  height: 100%;
-  padding-top: var(--sp-sm);
+  bottom: 0;
+  right: 4rem;
+  z-index: var(--z-index-modal);
+
+  width: 34rem;
+  height: 56rem;
 
   background: var(--bg-chat);
 
@@ -19,27 +22,83 @@
   border-left: 0.3rem solid var(--border-cta);
 
   box-shadow: 0.2rem 1.1rem 1.17rem 0rem rgba(0, 0, 0, 0.25) inset;
+
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
 }
 
-.ChatAvatar {
-  position: absolute;
-  top: -5rem;
-  left: -5rem;
+.ChatOpened {
+  transform: translateY(0);
+}
+
+.ChatCloseBtn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+}
+
+.ChatCloseBtn:hover {
+  color: var(--text-btn-hover);
+}
+
+.ChatCloseBtn:active {
+  transform: scale(0.9);
+}
+
+.ChatCloseBtn:focus {
+  border: none;
+  border-radius: var(--radius-circle);
+  outline: var(--border-btn-focus) 0.4rem solid;
+}
+
+.chatAvatarToggle {
+  z-index: var(--z-index-modal-btn);
+
+  background-color: transparent;
+  border: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.chatAvatarToggle:focus {
+  border: none;
+  border-radius: var(--radius-circle);
+  outline: var(--border-btn-focus) 0.4rem solid;
+}
+
+.chatAvatarToggle:active {
+  transform: scale(0.95);
+}
+
+.chatAvatarOpened {
+  position: fixed;
+  top: 20%;
+  right: 32rem;
+}
+
+.chatAvatarClosed {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  transform: scaleX(-1);
 }
 
 .ChatHeader {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .ChatTitle {
   display: flex;
   flex-direction: column;
+
   font-size: var(--fs-lg);
-  text-align: center;
   font-family: var(--ff-secondary);
   font-weight: var(--fw-regular);
+  text-align: center;
   line-height: normal;
 
   color: var(--text-alt);

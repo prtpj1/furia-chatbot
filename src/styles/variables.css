@@ -98,6 +98,7 @@
   --text-caret: var(--primary-700);
 
   --text-btn-default: var(--neutral-950);
+  --text-btn-hover: var(--primary-800);
   --text-btn-alt: var(--neutral-50);
   --text-btn-primary: var();
 
@@ -209,5 +210,6 @@
 
   /* Z-INDEX */
   --z-index-modal: 1000;
+  --z-index-modal-btn: 1050;
   --z-index-tooltip: 1100;
 }

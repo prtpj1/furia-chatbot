@@ -1,6 +1,5 @@
 import Chat from "@/components/chat/Chat";
 import styles from "./page.module.css";
-import Link from "next/link";
 import SubscribeForm from "@/components/subscribeForm/SubscribeForm";
 
 export default function Home() {

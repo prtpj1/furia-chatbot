@@ -2,10 +2,12 @@
 import Image from "next/image";
 import styles from "./chat.module.css";
 import { FaTelegramPlane } from "react-icons/fa";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 import { useChat } from "@ai-sdk/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Chat() {
+	const [isChatOpen, setIsChatOpen] = useState(false);
 	const { messages, input, handleInputChange, handleSubmit, error, append } =
 		useChat({
 			initialMessages: [
@@ -38,19 +40,42 @@ export default function Chat() {
 		}
 	}, [error, append]);
 
+	function handleChatToggle() {
+		setIsChatOpen(!isChatOpen);
+	}
+
+	function handleCloseChat() {
+		setIsChatOpen(false);
+	}
+
 	return (
 		<>
-			<section className={styles.Chat} aria-labelledby="chat-title">
-				<figure className={styles.ChatAvatar}>
-					<Image
-						src="/avatar_bust.png"
-						width={112}
-						height={112}
-						alt=""
-						role="presentation"
-						aria-hidden="true"
-					/>
-				</figure>
+			<button
+				className={`${styles.chatAvatarToggle} ${isChatOpen ? styles.chatAvatarOpened : styles.chatAvatarClosed}`}
+				type="button"
+				onClick={handleChatToggle}
+				aria-label={isChatOpen ? "Fechar chat" : "Abrir chat"}
+			>
+				<Image
+					src="/avatar_bust.png"
+					width={112}
+					height={112}
+					alt=""
+					aria-hidden="true"
+				/>
+			</button>
+			<section
+				className={`${styles.Chat}  ${isChatOpen ? styles.ChatOpened : styles.ChatClosed}`}
+				aria-labelledby="chat-title"
+			>
+				<button
+					className={styles.ChatCloseBtn}
+					type="button"
+					onClick={handleCloseChat}
+					aria-label="Fechar chat"
+				>
+					<IoMdCloseCircleOutline size={24} />
+				</button>
 				<header className={styles.ChatHeader}>
 					<h1 className={styles.ChatTitle} id="chat-title">
 						<span>Chat com a</span>
