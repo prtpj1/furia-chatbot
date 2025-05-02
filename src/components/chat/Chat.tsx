@@ -39,12 +39,26 @@ export default function Chat() {
 		}
 	}, [error, append]);
 
+	useEffect(() => {
+		if (isChatOpen) {
+			document.addEventListener("keydown", handleKeyDownCloseChat);
+		} else {
+			document.removeEventListener("keydown", handleKeyDownCloseChat);
+		}
+		return () =>
+			document.removeEventListener("keydown", handleKeyDownCloseChat);
+	}, [isChatOpen]);
+
 	function handleChatToggle() {
 		setIsChatOpen(!isChatOpen);
 	}
 
 	function handleCloseChat() {
 		setIsChatOpen(false);
+	}
+
+	function handleKeyDownCloseChat(e: KeyboardEvent) {
+		if (e.key === "Escape" && isChatOpen) handleCloseChat();
 	}
 
 	return (
@@ -54,6 +68,8 @@ export default function Chat() {
 				type="button"
 				onClick={handleChatToggle}
 				aria-label={isChatOpen ? "Fechar chat" : "Abrir chat"}
+				aria-expanded={isChatOpen}
+				aria-controls="chat-section"
 			>
 				<Image
 					src="/avatar_bust.png"
