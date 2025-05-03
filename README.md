@@ -10,7 +10,7 @@
 <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a> •
 <a href="#como-rodar-a-aplicação">Rodar a Aplicação</a> •
 <a href="#visualizar-o-site">Visualizar o Site</a> •
-<a href="#próximas-etapas">Próximas Etapas</a>
+<a href="#proximas-etapas">Próximas Etapas</a>
 </p>
 
 ---
@@ -27,6 +27,8 @@ Mudando para um modelo pago será possivel respostas com pesquisa em tempo real 
 Em todo caso, se acontecer, você precisará seguir os passos de como Rodar a Aplicação descrita passo a passo abaixo e usar uma APIKey sua, gerada no site da OpenRouter
 
 [Site da OpenRouter](https://openrouter.ai/settings/keys)
+
+<a id="tecnologias-utilizadas"></a>
 
 ## 🛠️Tecnologias Utilizadas 
 
@@ -113,8 +115,11 @@ ou clique no link que o terminal exibir.
 
 ---
 
-## 🛤️ Próximas Etapas
 
+
+<a id="proximas-etapas"></a>
+
+## 🛤️Próximas Etapas
 - Migrar para um plano pago da OpenRouter para obter respostas em tempo real e maior precisão.  
 - Criar interface para gerenciamento de configuração da IA (seleção de modelo, ajuste de temperatura, etc.).  
 - Incluir testes automatizados (unitários e de integração).
