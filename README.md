@@ -1,8 +1,10 @@
 # FURIA Landing Page com ChatBot IA: 
+<a id='topo'></a>
 <p align="center">
   <img src="https://github.com/prtpj1/prtpj1/blob/main/Headers/furia_header_github.png?raw=true" alt="Header" />
 </p>
-<a name="topo"></a>
+
+
 
 ---
 <p align="center">
@@ -10,7 +12,8 @@
 <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a> •
 <a href="#como-rodar-a-aplicação">Rodar a Aplicação</a> •
 <a href="#visualizar-o-site">Visualizar o Site</a> •
-<a href="#proximas-etapas">Próximas Etapas</a>
+<a href="#proximas-etapas">Próximas Etapas</a> •
+<a href="#licenca">Licença</a>
 </p>
 
 ---
@@ -28,6 +31,12 @@ Em todo caso, se acontecer, você precisará seguir os passos de como Rodar a Ap
 
 [Site da OpenRouter](https://openrouter.ai/settings/keys)
 
+<p align="right">
+<a href="#topo">Voltar ao topo</a>
+</p>
+
+---
+
 <a id="tecnologias-utilizadas"></a>
 
 ## 🛠️Tecnologias Utilizadas 
@@ -41,6 +50,12 @@ Em todo caso, se acontecer, você precisará seguir os passos de como Rodar a Ap
 - AI SDK
 
 <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/html2.png?raw=true" width="50" height="50" alt="HTML Icon" /></a><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/CSS2.png?raw=true" width="50" height="50" alt="CSS3 Icon" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/JavaScript2.png?raw=true" width="50" height="50" alt="JavaScript Icon" /></a><a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Typescript2.png?raw=true" width="50" height="50" alt="TypeScript Icon" /></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/React2.png?raw=true" width="50" height="50" alt="React Icon" /></a><a href="https://nextjs.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/piece_100_Next.png?raw=true" width="50" height="50" alt="Next Icon" /></a><a href="https://ai-sdk.dev/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/piece_100_ai_sdk.png?raw=true" width="50" height="50" alt="AI SDK Icon" /></a>
+
+<p align="right">
+<a href="#topo">Voltar ao topo</a>
+
+---
+</p>
 
 ## 🧩Estrutura do projeto
 ```bash
@@ -73,6 +88,12 @@ Em todo caso, se acontecer, você precisará seguir os passos de como Rodar a Ap
         ├── reset.css
         └── variables.css
 ```
+
+<p align="right">
+<a href="#topo">Voltar ao topo</a>
+</p>
+
+---
 
 ## 🚀Como rodar a aplicação
 - Clone o repositório: <br>
@@ -110,12 +131,20 @@ http://localhost:3000/
 ou clique no link que o terminal exibir.
 </br>
 
-## 💻Visualizar o site
-[Link do site](https://furia-chatbot-theta.vercel.app/)
+<p align="right">
+<a href="#topo">Voltar ao topo</a>
+</p>
 
 ---
 
+## 💻Visualizar o site
+[Link do site](https://furia-chatbot-theta.vercel.app/)
 
+<p align="right">
+<a href="#topo">Voltar ao topo</a>
+</p>
+
+---
 
 <a id="proximas-etapas"></a>
 
@@ -124,3 +153,15 @@ ou clique no link que o terminal exibir.
 - Criar interface para gerenciamento de configuração da IA (seleção de modelo, ajuste de temperatura, etc.).  
 - Incluir testes automatizados (unitários e de integração).
 - Internacionalizar a interface para suportar múltiplos idiomas.  
+
+---
+
+<a id="licenca"></a>
+
+## 📃Licença
+Distribuído sob a Licença MIT. Consulte [Licença](LICENSE) para mais informações.
+
+<p align="right">
+<a href="#topo">Voltar ao topo</a>
+</p>
+
