@@ -25,10 +25,11 @@ export default function Chat() {
 	const errorAppendedRef = useRef(false);
 	const chatInputRef = useRef<HTMLInputElement>(null);
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <Com o uso do if anteriormente colocado, o efeito de rolar o chat automaticamente para baixo conforme a IA ia escrevendo não estava funcionando corretamente. Até encontrar uma solução funcional, deixarei este warning desativado>
 	useEffect(() => {
-		bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
-	}, [messages]);
+		if (messages.length > 0) {
+			bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+		}
+	}, [messages.length]);
 
 	useEffect(() => {
 		if (error && !errorAppendedRef.current) {
