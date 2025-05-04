@@ -37,6 +37,7 @@
   top: 1rem;
   right: 1rem;
 
+  color: var(--icon-alt);
   background-color: transparent;
   border: none;
 }
@@ -210,7 +211,7 @@
   align-items: center;
 
   width: 100%;
-  padding-left: var(--sp-sm);
+  padding-inline: var(--sp-sm);
 
   caret-color: var(--text-caret);
 

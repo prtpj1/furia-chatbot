@@ -93,6 +93,7 @@
 
   /* Icons Colors */
   --icon-default: var(--neutral-50);
+  --icon-alt: var(--neutral-950);
   --icon-hover: var(--primary-600);
   --icon-cta: var(--primary);
 

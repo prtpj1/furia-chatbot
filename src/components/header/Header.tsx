@@ -20,17 +20,20 @@ export default function Header() {
 	}
 	return (
 		<header className={`${styles.header}`}>
-			<figure>
+			<Link href="/">
 				<Image src="/furia_logo.png" alt="Furia Logo" width={50} height={50} />
-			</figure>
-
+			</Link>
 			<nav
 				className={`${styles.navMenu}  ${isMenuOpen ? styles.navMenuOpened : ""}`}
+				id="social-media-nav"
+				aria-hidden={!isMenuOpen}
+				aria-label="Menu de navegação"
 			>
 				<button
 					className={styles.menuButton}
 					type="button"
 					onClick={handleOpenMenu}
+					aria-controls="social-media-nav"
 					aria-label="Fechar menu"
 					aria-expanded={isMenuOpen}
 				>
@@ -42,6 +45,7 @@ export default function Header() {
 							className={styles.linkSocialMedia}
 							href="https://www.instagram.com/furia.apparel/"
 							target="_blank"
+							rel="noopener noreferrer"
 						>
 							<FiInstagram className={`${styles.icon}`} />
 							Instagram
@@ -52,6 +56,7 @@ export default function Header() {
 							className={styles.linkSocialMedia}
 							href="https://www.tiktok.com/@furia"
 							target="_blank"
+							rel="noopener noreferrer"
 						>
 							<AiOutlineTikTok className={`${styles.icon}`} />
 							TikTok
@@ -62,6 +67,7 @@ export default function Header() {
 							className={styles.linkSocialMedia}
 							href="https://www.twitch.tv/furiatv"
 							target="_blank"
+							rel="noopener noreferrer"
 						>
 							<BsTwitch className={`${styles.icon}`} />
 							Twitch
@@ -72,6 +78,7 @@ export default function Header() {
 							className={styles.linkSocialMedia}
 							href="https://www.youtube.com/furiagg"
 							target="_blank"
+							rel="noopener noreferrer"
 						>
 							<IoLogoYoutube className={`${styles.icon}`} />
 							Youtube
@@ -82,6 +89,7 @@ export default function Header() {
 							className={styles.linkSocialMedia}
 							href="https://x.com/furia"
 							target="_blank"
+							rel="noopener noreferrer"
 						>
 							<FaXTwitter className={`${styles.icon}`} />
 							Twitter
