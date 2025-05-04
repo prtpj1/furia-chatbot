@@ -43,27 +43,19 @@
 
   /* Background Colors */
   --bg-surface: var(--neutral-400);
-  --bg-header: var();
   --bg-header-chat: var(--primary);
   --bg-chat: var(--primary);
   --bg-page: var(--neutral-950);
-  --bg-card: var();
   --bg-modal: var(--neutral-900);
 
-  --bg-btn-default: var();
   --bg-btn-hover: var(--primary-400);
   --bg-btn-hover-alt: var(--neutral-900);
-  --bg-btn-disable: var();
   --bg-btn-cta: var(--primary);
   --bg-btn-gradient_135deg: linear-gradient(
     135deg,
     var(--primary-500) 9.32%,
     var(--primary-700) 91.75%
   );
-
-  --bg-icon-default: var();
-  --bg-icon-hover: var();
-  --bg-tooltip: var();
 
   --bg-text-selection: var(--primary-700);
   --bg-input-autofill: var(--primary-600);
@@ -90,51 +82,27 @@
   /* Text Colors */
   --text-default: var(--neutral-50);
   --text-alt: var(--neutral-950);
-  --text-disable: var();
-  --text-primary-light: var();
-  --text-primary: var();
-  --text-primary-dark: var();
-  --text-highlight: var();
   --text-caret: var(--primary-700);
 
   --text-btn-default: var(--neutral-950);
   --text-btn-hover: var(--primary-800);
   --text-btn-alt: var(--neutral-50);
-  --text-btn-primary: var();
 
-  --text-menu: var();
-
-  --text-link: var();
-  --text-link-hover: var();
-
-  --text-tooltip: var();
+  --text-link-default: var(--neutral-50);
+  --text-link-hover: var(--primary-600);
 
   /* Icons Colors */
-  --icon: var();
-  --icon-hover: var();
+  --icon-default: var(--neutral-50);
+  --icon-hover: var(--primary-600);
   --icon-cta: var(--primary);
 
   /* Border Colors */
   --border-default: var(--neutral-500);
-  --border-primary: var();
-  --border-secondary: var();
 
   --border-highlight: var(--primary-600);
   --border-cta: var(--primary);
   --border-input-focus: var(--primary-800);
   --border-btn-focus: var(--primary-100);
-
-  --border-neutral-50: var(--neutral-50);
-  --border-neutral-100: var(--neutral-100);
-  --border-neutral-200: var(--neutral-200);
-  --border-neutral-300: var(--neutral-300);
-  --border-neutral-400: var(--neutral-400);
-  --border-neutral-500: var(--neutral-500);
-  --border-neutral-600: var(--neutral-600);
-  --border-neutral-700: var(--neutral-700);
-  --border-neutral-800: var(--neutral-800);
-  --border-neutral-900: var(--neutral-900);
-  --border-neutral-950: var(--neutral-950);
 
   --border-success: var(--success);
   --border-warning: var(--warnning);
@@ -211,5 +179,5 @@
   /* Z-INDEX */
   --z-index-modal: 1000;
   --z-index-modal-btn: 1050;
-  --z-index-tooltip: 1100;
+  --z-index-modal-menu: 1100;
 }
