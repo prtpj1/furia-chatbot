@@ -1,8 +1,9 @@
 .page {
+  overflow: hidden;
   position: relative;
   height: 100vh;
 
-  background: url('/bg_furia.png');
+  background: url('/bg_furia_mobile.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,4 +16,17 @@
   align-items: center;
 
   height: 100%;
+}
+
+@media (width >= 1024px) {
+  .page {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+
+    background: url('/bg_furia.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }

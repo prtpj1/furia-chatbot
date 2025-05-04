@@ -22,7 +22,6 @@ export default function Header() {
 						>
 							<FiInstagram
 								className={`${styles.icon} ${styles.iconInstagram}`}
-								size={24}
 							/>
 						</Link>
 					</li>
@@ -30,32 +29,24 @@ export default function Header() {
 						<Link href="https://www.tiktok.com/@furia" target="_blank">
 							<AiOutlineTikTok
 								className={`${styles.icon} ${styles.iconTikTok}`}
-								size={24}
 							/>
 						</Link>
 					</li>
 					<li>
 						<Link href="https://www.twitch.tv/furiatv" target="_blank">
-							<BsTwitch
-								className={`${styles.icon} ${styles.iconTwitch}`}
-								size={24}
-							/>
+							<BsTwitch className={`${styles.icon} ${styles.iconTwitch}`} />
 						</Link>
 					</li>
 					<li>
 						<Link href="https://www.youtube.com/furiagg" target="_blank">
 							<IoLogoYoutube
 								className={`${styles.icon} ${styles.iconYoutube}`}
-								size={24}
 							/>
 						</Link>
 					</li>
 					<li>
 						<Link href="https://x.com/furia" target="_blank">
-							<FaXTwitter
-								className={`${styles.icon} ${styles.iconTwitter}`}
-								size={24}
-							/>
+							<FaXTwitter className={`${styles.icon} ${styles.iconTwitter}`} />
 						</Link>
 					</li>
 				</ul>

@@ -26,7 +26,7 @@ export default function SubscribeForm() {
 						type="text"
 						id="name"
 						name="name"
-						ref={nameInputRef}
+						// ref={nameInputRef}
 						placeholder="Nome"
 						required
 					/>

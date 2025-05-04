@@ -69,26 +69,26 @@ export default function Chat() {
 
 	return (
 		<>
-			<button
-				className={`${styles.chatAvatarToggle} ${isChatOpen ? styles.chatAvatarOpened : styles.chatAvatarClosed}`}
-				type="button"
-				onClick={handleChatToggle}
-				aria-label={isChatOpen ? "Fechar chat" : "Abrir chat"}
-				aria-expanded={isChatOpen}
-				aria-controls="chat-section"
-			>
-				<Image
-					src="/avatar_bust.png"
-					width={112}
-					height={112}
-					alt=""
-					aria-hidden="true"
-				/>
-			</button>
 			<section
 				className={`${styles.Chat}  ${isChatOpen ? styles.ChatOpened : styles.ChatClosed}`}
 				aria-labelledby="chat-title"
 			>
+				<button
+					className={`${styles.chatAvatarToggle} ${isChatOpen ? styles.chatAvatarOpened : styles.chatAvatarClosed}`}
+					type="button"
+					onClick={handleChatToggle}
+					aria-label={isChatOpen ? "Fechar chat" : "Abrir chat"}
+					aria-expanded={isChatOpen}
+					aria-controls="chat-section"
+				>
+					<Image
+						src="/avatar_bust.png"
+						width={112}
+						height={112}
+						alt=""
+						aria-hidden="true"
+					/>
+				</button>
 				<button
 					className={styles.ChatCloseBtn}
 					type="button"
